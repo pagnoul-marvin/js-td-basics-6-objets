@@ -18,3 +18,26 @@ Aurora s'apprête à vivre une longue série d'aventures, dont certaines pourron
 10. Ajoute 10 points de force à Aurora
 11. Réaffiche la description d'aurora
 */
+
+const Aurora = {
+    nom : "Aurora",
+    sante : 150,
+    force : 25,
+    xp : 0,
+    decrire() {
+        return `${this.nom} a ${this.sante} points de vie, ${this.force} de force et ${this.xp} points d'expérience`;
+    }
+}
+console.log(Aurora.decrire());
+
+console.log(`${Aurora.nom} apprend une nouvelle compétence`);
+Aurora.xp = Aurora.xp + 15;
+console.log(Aurora.decrire());
+
+console.log(`${Aurora.nom} est blessée par une flèche`);
+Aurora.sante = Aurora.sante - 20;
+console.log(Aurora.decrire());
+
+console.log(`${Aurora.nom} trouve un bracelet de force`);
+Aurora.force = Aurora.force + 15;
+console.log(Aurora.decrire());

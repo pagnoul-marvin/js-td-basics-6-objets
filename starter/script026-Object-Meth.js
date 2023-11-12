@@ -7,38 +7,35 @@
 const aurora = {
     nom: "Aurora",
     sante: 150,
-    force: 25
+    force: 25,
+    decrire(personnage) {
+        return `${aurora.nom} a ${aurora.sante} points de vie et a ${aurora.force} en force`;
+    }
 };
 
 // Affiche "… a … points de vie et … en force"
-
+console.log(`${aurora.nom} a ${aurora.sante} points de vie et a ${aurora.force} en force`);
 // Crée une fonction décrire qui prend personnage en paramètre et renvoie la description du personnage
 // écris ta fonction décrire ici
 
 // Utilise cette fonction pour afficher la description d'Aurora
-
+aurora.decrire(aurora);
 // Ajoute à présent cette fonction à l'intérieur de l'objet aurora
-const aurora = {
-    nom: "Aurora",
-    sante: 150,
-    force: 25,
-    // renvoie la description du personnage
-    // écris ton code ici
-};
-// Utilise à présent cette méthode pour afficher la description d'Aurora
 
+// Utilise à présent cette méthode pour afficher la description d'Aurora
+console.log(aurora.decrire(aurora));
 /*
 EXERCICE 1 : Ajoute une méthode calcAge à john qui calcule son âge
 (en soustrayant sa date de naissance de 2019), le retourne et le stocke dans une propriété age.
 */
-var john = {
+const john = {
     firstName: 'John',
     lastName: 'Smith',
     birthYear: 1992,
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
     job: 'teacher',
     isMarried: false,
-    calcAge: function() {
+    calcAge() {
         return this.age = 2019 - this.birthYear;
     }
 };
@@ -51,6 +48,14 @@ EXERCICE 2 :
 - Ajoute une méthode à cet objet qui lui permet de calculer sa propre surface
 - Utilise cette méthode pour afficher sa surface dans la console
 */
+const rectangle = {
+    longueur : 5,
+    largeur : 3,
+    calcSurface() {
+        return this.surface = this.longueur*this.largeur;
+    }
+}
+console.log(rectangle.calcSurface());
 
 /* **********************************
 * Les objets prédéfinis de JavaScript
