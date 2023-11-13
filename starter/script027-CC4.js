@@ -16,3 +16,32 @@ Rappel: BMI = poids / taille^2 = poids / (taille * taille). (poids en kg and tai
 
 BONNE CHANCE 😀
 */
+
+const Mark = {
+    nom : "Mark",
+    taille : 178,
+    poids : 87,
+    calcBMI() {
+        return `${this.poids / this.taille*this.taille}`;
+    }
+}
+const John = {
+    nom : "John",
+    taille : 167,
+    poids : 94,
+    calcBMI2() {
+        return `${this.poids / this.taille*this.taille}`;
+    }
+}
+
+if (John.calcBMI2() > Mark.calcBMI()) {
+    console.log("John a un BMI supérieur à Mark.");
+} else if (John.calcBMI2() === Mark.calcBMI()) {
+    console.log("John et Mark ont le même BMI.");
+} else {
+    console.log("Mark a un BMI supérieur à John.");
+}
+
+
+
+
