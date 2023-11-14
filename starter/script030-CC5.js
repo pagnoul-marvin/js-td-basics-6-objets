@@ -40,3 +40,30 @@ du tableau (c'est comme cela qu'on calcule une moyenne).
 
 BONNE CHANCE 😀
 */
+
+const factures = {
+    prix: [124, 48, 268, 180, 42],
+    pourboire: [],
+    montantFinaux: [],
+    calcPourboires() {
+        factures.prix.forEach(facture => {
+            if (facture < 50) {
+                this.pourboire.push(facture * 0.2);
+                return this.montantFinaux.push(this.pourboire[0]+facture);
+            }
+            if (facture >= 50 || facture <= 200) {
+                this.pourboire.push(facture * 0.15);
+                return this.montantFinaux.push(this.pourboire[0]+facture);
+            }
+            if (facture > 200) {
+                this.pourboire.push(facture * 0.10);
+                return this.montantFinaux.push(this.pourboire[0]+facture);
+            }
+        })
+    }
+}
+
+factures.calcPourboires();
+console.log(factures.pourboire);
+console.log(factures.montantFinaux);
+
