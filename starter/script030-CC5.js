@@ -49,15 +49,15 @@ const factures = {
         factures.prix.forEach(facture => {
             if (facture < 50) {
                 this.pourboire.push(facture * 0.2);
-                return this.montantFinaux.push(this.pourboire[0]+facture);
+                return this.montantFinaux.push((facture * 0.2) + facture);
             }
-            if (facture >= 50 || facture <= 200) {
+            if (facture >= 50 && facture <= 200) {
                 this.pourboire.push(facture * 0.15);
-                return this.montantFinaux.push(this.pourboire[0]+facture);
+                return this.montantFinaux.push((facture * 0.15) + facture);
             }
             if (facture > 200) {
-                this.pourboire.push(facture * 0.10);
-                return this.montantFinaux.push(this.pourboire[0]+facture);
+                this.pourboire.push(facture * 0.1);
+                return this.montantFinaux.push((facture * 0.10) + facture);
             }
         })
     }
