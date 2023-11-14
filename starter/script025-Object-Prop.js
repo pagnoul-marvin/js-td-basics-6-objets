@@ -64,7 +64,7 @@ const stylo = {
     couleur : "bleue",
     marque : "bic",
 
-}
+};
 
 console.log(stylo);
 console.log(`J'écris avec un stylo de type ${stylo.type}, de couleur ${stylo.couleur} de marque ${stylo.marque}`);

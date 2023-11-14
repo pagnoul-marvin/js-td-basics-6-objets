@@ -24,7 +24,8 @@ const Mark = {
     calcBMI() {
         return `${this.poids / this.taille*this.taille}`;
     }
-}
+};
+
 const John = {
     nom : "John",
     taille : 167,
@@ -32,7 +33,7 @@ const John = {
     calcBMI2() {
         return `${this.poids / this.taille*this.taille}`;
     }
-}
+};
 
 if (John.calcBMI2() > Mark.calcBMI()) {
     console.log("John a un BMI supérieur à Mark.");

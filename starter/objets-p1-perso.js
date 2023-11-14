@@ -27,7 +27,7 @@ const Aurora = {
     decrire() {
         return `${this.nom} a ${this.sante} points de vie, ${this.force} de force et ${this.xp} points d'expérience`;
     }
-}
+};
 console.log(Aurora.decrire());
 
 console.log(`${Aurora.nom} apprend une nouvelle compétence`);

@@ -23,7 +23,7 @@ const compte = {
     decrire() {
         return `${this.titulaire} a ${this.solde} euros sur son compte actuellement`;
     }
-}
+};
 
 console.log(compte.decrire());
 compte.solde = compte.crediter(250);

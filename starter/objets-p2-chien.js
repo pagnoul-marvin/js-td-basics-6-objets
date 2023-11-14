@@ -20,7 +20,7 @@ const chien = {
     aboyer() {
         return "Wah ! Wah !";
     }
-}
+};
 
 console.log(`${chien.nom} est un ${chien.race} de couleur ${chien.couleur}`);
 console.log(`Tiens un chat ! ${chien.nom} aboie : ${chien.aboyer()}`);

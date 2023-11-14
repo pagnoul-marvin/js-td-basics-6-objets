@@ -48,20 +48,20 @@ const factures = {
     calcPourboires() {
         factures.prix.forEach(facture => {
             if (facture < 50) {
-                this.pourboire.push(facture * 0.2);
-                return this.montantFinaux.push((facture * 0.2) + facture);
+                this.pourboire.push(Math.ceil(facture * 0.2));
+                return this.montantFinaux.push(Math.ceil(facture * 0.2) + facture);
             }
             if (facture >= 50 && facture <= 200) {
-                this.pourboire.push(facture * 0.15);
-                return this.montantFinaux.push((facture * 0.15) + facture);
+                this.pourboire.push(Math.ceil(facture * 0.15));
+                return this.montantFinaux.push(Math.ceil(facture * 0.15) + facture);
             }
             if (facture > 200) {
-                this.pourboire.push(facture * 0.1);
-                return this.montantFinaux.push((facture * 0.10) + facture);
+                this.pourboire.push(Math.ceil(facture * 0.1));
+                return this.montantFinaux.push(Math.ceil(facture * 0.1) + facture);
             }
-        })
+        });
     }
-}
+};
 
 factures.calcPourboires();
 console.log(factures.pourboire);

@@ -55,7 +55,7 @@ const rectangle = {
     calcSurface() {
         return this.surface = this.longueur*this.largeur;
     }
-}
+};
 console.log(rectangle.calcSurface());
 
 /* **********************************
