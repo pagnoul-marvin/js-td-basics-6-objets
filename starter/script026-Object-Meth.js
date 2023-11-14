@@ -51,6 +51,7 @@ EXERCICE 2 :
 const rectangle = {
     longueur : 5,
     largeur : 3,
+    surface : "",
     calcSurface() {
         return this.surface = this.longueur*this.largeur;
     }
